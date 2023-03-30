@@ -312,11 +312,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: currentColor;
+  color: #f4f4fd;
   margin-top: 8px;
 }
-.soc-link:hover {
+.soc-link:hover,
+.soc-link:focus {
   background-color: #404bbf;
+}
+.soc-icon {
+  fill: currentColor;
 }
 /* !---------------CUSTOMERS-------------------------- */
 
@@ -343,13 +347,19 @@ body {
   border: 1px solid #8e8f99;
   border-radius: 4px;
 }
-.customers-item:hover {
-  border: 1px solid #404bbf;
+
+.customers-icon {
+  fill: currentColor;
 }
-.customer-item:hover {
+.customers-item:hover,
+.customers-item:focus {
+  border: 1px solid #404bbf;
+  border-radius: 4px;
+}
+.customers-item:hover,
+.customers-item:focus {
   color: #404bbf;
 }
-
 /* !-------------------FOOTER------------- */
 .footer {
   background-color: var(--second-title-color);
@@ -396,16 +406,7 @@ body {
   text-transform: uppercase;
   color: #f4f4fd;
 }
-.footer-soc-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-.footer-soc-wrap {
-  display: flex;
-  flex-direction: column;
-}
+
 .footer-soc-text {
   font-weight: 500;
   font-size: 16px;
@@ -414,7 +415,10 @@ body {
   color: #ffffff;
   margin-bottom: 16px;
 }
-
+.footer-soc-list {
+  display: flex;
+  gap: 16px;
+}
 .footer-soc-item {
   width: 40px;
   height: 40px;
@@ -424,14 +428,17 @@ body {
   height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.footer-soc-link:hover {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
   background-color: #31d0aa;
 }
 .footer-soc-icon {
+  fill: currentColor;
 }
 /* !----------------MAIN_CONTENT------ */
 
@@ -454,6 +461,9 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
+}
+.filter-btn:is(:hover, :focus) {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .filter-btn {
   font-family: "Roboto", sans-serif;
@@ -492,4 +502,8 @@ body {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+.products-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
